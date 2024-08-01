@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro e Login</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="shortcut icon" type="imagex/png" href="imagens/login-da-conta.png">
+</head>
+<body>
+    <header>
+        <h2 class="logo">Wesley Galves</h2>
+        <nav class="nav">
+            <a href="https://github.com/WesleyGAlves" target="_blank">GitHub<i class='bx bxl-github'></i></a>
+            <a href="https://wa.me/553591564409" target="_blank" >WhatsApp<i style="color: green;" class='bx bxl-whatsapp'></i></a>
+            <a href="https://www.linkedin.com/in/wesley-gon%C3%A7alves-alves-3b95472ab/" target="_blank">LinkedIn<i style="color: #3356db;" class='bx bxl-linkedin-square'></i></a>
+            <button class="btn_login_popup">Login</button>
+        </nav>
+    </header>
+
+    <div class="wrapper">
+        <span class="icon_close"><i class='bx bx-x'></i></span>
+
+        <div class="form_box login">
+            <h2>Login</h2>
+
+            <div id="msgError"></div>
+
+            <form action="#">
+                <div class="input_box">
+                    <span class="icon"><i class='bx bxs-user-circle'></i></span>
+                    <input type="text" id="usuario" required>
+                    <label id="user_label" for="usuario">Usuário</label>
+                </div>
+                <div class="input_box">
+                    <span class="icon"><i class='bx bxs-lock-alt' ></i></span>
+                    <input type="password" id="senha" required>
+                    <label id="senha_label" for="senha">Senha</label>
+                </div>
+                <div class="lembra_esquece">
+                    <label><input type="checkbox">Lembre-se</label>
+                    <a href="#">Esqueceu a senha?</a>
+                </div>
+                <button onclick="entrar()" class="btn">Login</button>
+                <div class="login_registro">
+                    <p>Não tem uma conta? <a href="#" class="link_registro">Cadastre-se</a></p>
+                </div>
+            </form>
+        </div>
+
+        <div class="form_box registro">
+            <h2>Cadastre-se</h2>
+
+            <div id="msgError"></div>
+            <div id="msgSuccess"></div>
+
+            <form action="#">
+                <div class="input_box">
+                    <span class="icon"><i class='bx bxs-user-circle'></i></span>
+                    <input type="text" id="nome_cadastro" required>
+                    <label id="label_nome">Nome</label>
+                </div>
+                <div class="input_box">
+                    <span class="icon"><i class='bx bxs-user-circle'></i></span>
+                    <input type="text" id="usuario_cadastro" required>
+                    <label id="label_usuario">Usuário</label>
+                </div>
+                <div class="input_box">
+                    <span class="icon"><i class='bx bxs-lock-alt' ></i></span>
+                    <input type="password" id="senha_cadastro" required>
+                    <label id="label_senha">Senha</label>
+                </div>
+                <div class="lembra_esquece">
+                    <label><input type="checkbox">Eu concordo com os termos e condições</label>
+                </div>
+                <button onclick="cadastrar()" class="btn">Cadastre-se</button>
+                <div class="login_registro">
+                    <p>Possui uma conta? <a href="#" class="link_login">Login</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="script.js">
+</body>
+</html>
+
+
