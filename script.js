@@ -149,16 +149,19 @@ function cadastrar(){
 
 
 function entrar(){
+    let listaUser = JSON.parse(localStorage.getItem('listaUser') || '[]');
 
-  var storedUser = localStorage.getItem('userCad');
-  var storedSenha = localStorage.getItem('senhaCad');
+    var user = document.getElementById('usuario').value.trim();
+    var userSenha = document.getElementById('senha').value.trim();
 
-  var user = document.getElementById('usuario.value');
-  var userSenha = document.getElementById('senha.value');
+    // Busca um usuário correspondente dentro do array
+    let userEncontrado = listaUser.find(userObj => 
+    userObj.userCad === user && userObj.senhaCad === userSenha);
 
-  if(user == storedUser && userSenha == storedSenha){
-    alert('Você esta logado.');
-  }else{
-    alert('Erro no login.');
-  }
+    if (userEncontrado) {
+        alert(`Bem-vindo, ${userEncontrado.nomeCad}! Você está logado.`);
+        window.location.href = 'home.html'; // Redirecionar para outra página
+    } else {
+        alert('Erro no login. Usuário ou senha incorretos.');
+    }
 }
